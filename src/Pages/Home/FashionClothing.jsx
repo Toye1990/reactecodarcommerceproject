@@ -15,36 +15,6 @@ import { ContextData } from '../../Hooks/Formcontext'
 
 const FashionClothing = () => {
    
-  //const { addCart } = ContextData()
-
-  /*const [cart, setCart] = useState([]);
-
-  // Load cart items when page mounts
-  useEffect(() => {
-    const fetchCart = async () => {
-      try {
-        const data = await getCart();
-        setCart(data.cart || []); // backend returns {cart: [...]}
-      } catch (error) {
-        console.error("Failed to load cart", error);
-      }
-    };
-    fetchCart();
-  }, []);
-
-  // Add item (example: hardcoded item)
-  const handleAdd = async () => {
-    const newItem = { title: "Laptop", price: 1200, quantity: 1 };
-    const data = await addCart(newItem);
-    setCart(data.cart); // update UI
-    toast.success("cart added successfully")
-  };
-
-  // Remove item
-  const handleRemove = async (id) => {
-    const data = await removeItem(id);
-    setCart(data.cart); // update UI
-  };*/
    
   const { addCart } = ContextData()
    
@@ -53,7 +23,7 @@ const FashionClothing = () => {
       return sentence;
     }
   
-    return `${sentence.substring(0, length)}...`;
+    return `${sentence.substring(0, length)}`;
   }
   
   function formatRate(rate){
@@ -78,7 +48,7 @@ const FashionClothing = () => {
        }
 
        const productmark = data.data.slice(2, 4)
-       const productmarket = data.data.slice(5, 7)
+       //const productmarket = data.data.slice(5, 7)
        console.log(productmark)
 
 
@@ -116,7 +86,7 @@ const FashionClothing = () => {
                             <small>Digial, Electronic</small>
                             <h6>{clipSentence(item.title)}</h6>
                             <p>{item.price}</p>
-                            <button type='button' >Add to cart</button>
+                            <button type='button' onClick={()=>{addCart(item)}}>Add to cart</button>
                           </div>
                         </div>
                       ))}
@@ -134,7 +104,7 @@ const FashionClothing = () => {
           
                      <div className="grid text-left row-gap-0 col-gap-0 gridset" >
                      {
-                      productmarket.map((item) =>(
+                      productmark.map((item) =>(
                         <div className="g-col-6" key={item.id}>
                         <div className='grid-img'><img src={item.image}/></div>
                           <div className='grid-text'>
