@@ -1,0 +1,34 @@
+input{
+    margin-bottom: 14px;
+    text-align: left;
+    }
+
+form{
+    max-width: 400px;
+}
+
+h5{
+    margin-top: 30px;
+    margin-left: 140px;
+}
+
+.signinpage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
