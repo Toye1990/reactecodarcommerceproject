@@ -5,11 +5,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { ContextData } from "../Context/useContext";
 
 const Bottomheader = () => {
-
+  const {cart} = ContextData()
   return (
-    <>
+    <> 
       <div className="bottomheader">
 
         <div className="menu-logo">
@@ -51,7 +52,7 @@ const Bottomheader = () => {
              <div className="textname">Your Cart</div>
              </div>
              
-            <div className="cartrectangle">1</div>
+            <div className="cartrectangle">{cart.length}</div>
         </div>
 
       </div>

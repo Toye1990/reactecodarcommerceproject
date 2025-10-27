@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useEffect } from "react";
+/*import { createContext, useState, useContext, useEffect } from "react";
 import toast from "react-hot-toast";
 import { getLocalStorage } from "./Forusecontext";
 import { getSessionStorage } from "./Forusecontext";
@@ -7,7 +7,7 @@ import Cartnewcontext from "./Cartnewcontext";
 //import Products from "./Products";
 
 
-
+/*
 const StorageContext = createContext();
 //const {data = []} = Products()
 
@@ -81,7 +81,7 @@ export const ContextProvider = ({ children }) => {
 
 
   const addCart = (data) => {
-    const check = Cartnewcontext.filter((item) =>{ 
+    const check = cart.filter((item) =>{ 
       return item.title === data.title
     });
 
@@ -97,9 +97,9 @@ export const ContextProvider = ({ children }) => {
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
     toast.success("cart added successfully");
-    return newCart;*/
-  };
-
+    return newCart;
+  }*/
+/*
   const removecart = (index) => {
     const newCart = [...cart];
     newCart.splice(index, 1);
@@ -132,3 +132,4 @@ export const ContextData = () => {
   return useContext(StorageContext);
 };
 
+*/

@@ -10,6 +10,8 @@ import Register from "./Pages/Contact/Register";
 import Cart from "./Pages/cart/Cart";
 import Protectedroute from "./Hooks/Protectedroute";
 import Checkout from "./Pages/checkoutpage/Checkout";
+import Productdashboard from "./Pages/dashboard/Productdashboard";
+//import Productdash from "./Pages/dashboard/Productdash";
 
 
 export const router = createBrowserRouter([
@@ -25,6 +27,11 @@ export const router = createBrowserRouter([
         {path: "/checkout", element:  (
         <Protectedroute>
             <Checkout/>
+        </Protectedroute>
+    )},
+     {path: "/dashboard", element:  (
+        <Protectedroute>
+            <Productdashboard/>     
         </Protectedroute>
     )},
     {path: "/signin", element: <Signin/>},

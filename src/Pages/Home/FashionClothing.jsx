@@ -8,15 +8,15 @@ import fashionbanner from "../../assets/images/fashionbanner1.jpg"
 //import carvas from "../../assets/images/carvas1.png"
 import Loader from "../../component/Loader/Loader"
 import Products from '../../Hooks/Products'
-import { ContextData } from '../../Hooks/Formcontext'
 //import { ContextData } from '../../Hooks/Formcontext'
 //import addCart from '../../Hooks/carthook'
+import { ContextData } from '../../Context/useContext'
 
 
 const FashionClothing = () => {
    
    
-  const { addCart } = ContextData()
+  const { addToCart } = ContextData()
    
   function clipSentence(sentence, length) {
     if (sentence.length <= length) {
@@ -86,7 +86,7 @@ const FashionClothing = () => {
                             <small>Digial, Electronic</small>
                             <h6>{clipSentence(item.title)}</h6>
                             <p>{item.price}</p>
-                            <button type='button' onClick={()=>{addCart(item)}}>Add to cart</button>
+                            <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                           </div>
                         </div>
                       ))}

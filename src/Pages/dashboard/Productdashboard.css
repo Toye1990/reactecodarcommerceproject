@@ -1,0 +1,42 @@
+ /* Custom styles to define sidebar width and main content margin */
+        :root {
+            --sidebar-width: 250px;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            padding-top: 56px; /* Space for fixed navbar */
+        }
+
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding-top: 70px; /* Space for fixed navbar */
+        }
+
+        /* Ensure navbar doesn't cover content */
+        .navbar.fixed-top {
+            z-index: 101;
+        }
+
+        /* Active sidebar link styling */
+        .sidebar .nav-link.active {
+            background-color: var(--bs-primary);
+            color: #fff !important;
+            border-radius: 0.25rem;
+        }
+
+
+        .btn{
+            display: inline-block;
+            width: 70%;
+            height: 60%;
+        }
+
+        .my-btn{
+            display: flex;
+        }

@@ -1,0 +1,43 @@
+.button{
+    background-color: rgb(16, 143, 216);
+}
+
+
+.cart__price{
+   text-align: center;
+}
+
+.pro-qty-2 input{
+    width: 50%;
+} 
+
+.remove{
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.primary-btn{
+    background-color: rgb(16, 143, 216);
+    padding: 10px 30px;
+}
+
+
+.continue__btn .shopping{
+    background-color: rgb(16, 143, 216);
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
+ .update__btn{
+    background-color: rgb(16, 143, 216);
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.cart__total a{
+    color: white;
+    text-decoration: none;
+}

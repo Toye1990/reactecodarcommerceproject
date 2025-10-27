@@ -9,12 +9,13 @@ import banner1 from "../../assets/images/bannercut1.jpg"
 import banner2 from "../../assets/images/bannercut2.jpg"
 import Products from '../../Hooks/Products'
 import Loader from "../../component/Loader/Loader"
-import { ContextData } from '../../Hooks/Formcontext'
+import { ContextData } from '../../Context/useContext'
+
 
 
 const Electronic = () => {
 
-  const { addCart } = ContextData()
+  const { addToCart } = ContextData()
 
   function clipSentence(sentence, length) {
     if (sentence.length <= length) {
@@ -119,7 +120,7 @@ const Electronic = () => {
                   <small>Digial, Electronic</small>
                   <h6>{clipSentence(item.title, 20)}</h6>
                   <p>${item.price}</p>
-                  <button type='button' onClick={() =>{ addCart()}}>Add to cart</button>
+                  <button type='button' onClick={() =>{ addToCart()}}>Add to cart</button>
                 </div>
               </div>
 

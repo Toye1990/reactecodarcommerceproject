@@ -2,8 +2,8 @@ import { useState, useContext } from 'react'
 import '../Contact/Contacting.css'
 import toast from 'react-hot-toast'
 import axios from 'axios'
-import { ContextData } from '../../Hooks/Formcontext'
 import { useNavigate } from 'react-router-dom'
+import { ContextData } from '../../Context/useContext'
 
 
 

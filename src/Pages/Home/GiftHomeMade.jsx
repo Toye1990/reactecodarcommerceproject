@@ -9,8 +9,7 @@ import longbanner2 from "../../assets/images/longbanner2.jpg"
 //import banner2 from "../../assets/images/bannercut2.png"
 import Loader from '../../component/Loader/Loader'
 import Products from '../../Hooks/Products'
-import { ContextData } from '../../Hooks/Formcontext'
-
+import { ContextData } from '../../Context/useContext'
 
 const GiftHomeMade = () => {
 
