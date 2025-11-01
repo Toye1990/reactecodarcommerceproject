@@ -440,7 +440,7 @@ const Productdashboard = () => {
         {
           headers: {
             
-            Authorization: console.log(token) `Bearer ${token}`,
+            Authorization: /*console.log(token)*/ `Bearer ${JSON.parse(token)}`,
           },
           withCredentials: true,
         }

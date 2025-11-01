@@ -6,14 +6,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ContextData } from '../../Context/useContext'
 
 const Signin = () => {
-  const navigate = useNavigate()
+  /*const navigate = useNavigate()
   const { addUser, setMyToken } = useContext(ContextData) // ✅ use useContext properly
 
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   })
-
+ 
   // handle input change
   const handchange = (e) => {
     const { name, value } = e.target
@@ -58,12 +58,82 @@ const Signin = () => {
         toast.error("Network or server error")
       }
     }
-  }
+  }*/
+
+     const Navigate = useNavigate();
+  //const [loading, setLoading] = useState(false);
+
+  const { addUser, setMyToken } = ContextData();
+  const [formData, setFormData] = useState({
+    password: "",
+    email: "",
+  });
+
+  // await addUser(response.data.user);
+  // await setMyToken(response.data.token);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const loginUser = async () => {
+   // setLoading(true);
+
+    try {
+      const empty = [];
+      if (!formData.email || formData.email.trim() === "") {
+        empty.push("Email is required");
+      }
+
+      if (!formData.password || formData.password.trim() === "") {
+        empty.push("Password is required");
+      }
+
+      if (empty.length > 0) {
+        empty.forEach((item) => {
+          toast.error(item);
+        });
+       // setLoading(false);
+        return;
+      }
+
+      const response = await axios.post(
+        "http://localhost:2233/api/v1/login",
+        formData
+      );
+
+      if (response && response.status === 200 && response.data) {
+        await addUser(response.data.user);
+        await setMyToken(response.data.token);
+        toast.success("Login Successful");
+        //setLoading(false);
+        Navigate("/");
+        return;
+      } else {
+        toast.error("Error Occured !");
+       // setLoading(false);
+        return;
+      }
+    } catch (err) {
+      if (err.response) {      
+        toast.error(`${err.response.data.message || err.message}`);
+      } else {
+        console.log("Error:", err.message);
+        toast.error("Error Occurred");
+      }
+      //setLoading(false);
+    }
+  };
+
 
   return (
     <div className='signinpage'>
       <div className='container'>
-        <form className='form-control p-4' onSubmit={loginlogic}>
+        <form className='form-control p-4'>
           <div className='text-center mb-4'>
             <h5>Login</h5>
           </div>
@@ -74,7 +144,7 @@ const Signin = () => {
             name='email'
             placeholder='Email'
             value={formData.email}
-            onChange={handchange}
+            onChange={handleChange}
           />
 
           <input
@@ -83,12 +153,12 @@ const Signin = () => {
             name='password'
             placeholder='Password'
             value={formData.password}
-            onChange={handchange}
+            onChange={handleChange}
           />
 
-          <button type='submit' className='btn btn-primary w-100'>
+          <div onClick={loginUser} className='btn btn-primary w-100'>
             Login
-          </button>
+          </div>
 
           <div className='text-center mt-3'>
             <span>Don’t have an account? </span>
