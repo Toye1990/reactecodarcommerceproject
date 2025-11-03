@@ -9,17 +9,42 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import headphone from '../assets/images/headphone2p.jpg'
 import tab from '../assets/images/tab2p.jpg'
 import '../Pages/Home/Homepage.css'
-
+//import Topheader from './Topheader';
 
 const Header = () => {
    
-  const [menuClick, setMenuClick] = useState(false);
-
+ const [menuClick, setMenuClick] = useState(false);
+ 
 const openMenu = () =>{
-  setMenuClick(!menuClick)
+   setMenuClick((prev) => !prev);
 
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navList = document.getElementById("navList");
+
+  // Toggle open/close on click
+  menuToggle.addEventListener("click", function () {
+    navList.classList.toggle("open");
+
+    // Optionally change icon between bars and X
+    if (navList.classList.contains("open")) {
+      menuToggle.innerHTML = '<GiHamburgerMenu size={23} />'; // close icon
+    } else {
+      menuToggle.innerHTML = '<GiHamburgerMenu size={23} />'; // hamburger icon
+    }
+  });
+
+  // Optional: close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!menuToggle.contains(e.target) && !navList.contains(e.target)) {
+      navList.classList.remove("open");
+      menuToggle.innerHTML = '<GiHamburgerMenu size={23} />';
+    }
+  });
+});
 
 
 
@@ -27,7 +52,7 @@ const openMenu = () =>{
     <>
       <div className="container-1">
       <header>
-        <Topheader/>
+        <Topheader openMenu={openMenu} menuOpen={menuClick} />
         <Bottomheader/>
         <div className="navbar">
           <nav>
@@ -36,7 +61,7 @@ const openMenu = () =>{
             <div className='close-icon' onClick={openMenu}>{menuClick?<IoClose size={23}/> : <GiHamburgerMenu size={23} />}</div>
           </div>
           
-            <ul>
+            <ul className={`navlist ${menuClick ? "open" : ""}`}>
             
               <li><Link to="/" className="active">HOME <FaAngleDown size={12}/></Link> </li>
               <li><Link to="/shop">SHOP <FaAngleDown size={12}/></Link> </li>
@@ -192,10 +217,7 @@ const openMenu = () =>{
       </div>
 
       </div>
-
-      <script>
-
-      </script>
+        
     </>
   )
 }

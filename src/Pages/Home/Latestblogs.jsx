@@ -59,7 +59,7 @@ const nextSlide = () => {
     <>
        <div className="blog-container">
                       <div className='blog-topline'>
-                        <h4>Latest Blogs</h4>
+                        <h4>LATEST BLOGS</h4>
                         <div className='icon-text'>
                           <div className="arrival-deals">
                             <FaAngleLeft size={12}/><FaAngleRight size={12}/>

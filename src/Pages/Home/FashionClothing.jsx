@@ -58,7 +58,7 @@ const FashionClothing = () => {
     <>
    <div className='fashion-container'>
        <div className='fashion-topline'>
-            <h4>Fashion & Clothing</h4>
+            <h4>FASHION & CLOTHING</h4>
             <div className='fashion-text'>
               <ul>
                 <li>men</li>

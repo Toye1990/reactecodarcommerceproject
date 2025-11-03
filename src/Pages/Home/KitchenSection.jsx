@@ -50,7 +50,7 @@ const KitchenSection = () => {
     <>
       <div className="kitchen-container">
                 <div className='kitchen-topline'>
-                  <h4>Home, Garden and kitchen</h4>
+                  <h4>HOME & KITCHEN</h4>
                   <div className='kitchen-text'>
                     <ul>
                       <li>Kitchen</li>

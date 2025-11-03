@@ -55,7 +55,7 @@ const GiftHomeMade = () => {
     <>
       <div className="gift-container">
                       <div className='gift-topline'>
-                        <h4>Gifts and Homemade</h4>
+                        <h4>GIFT & HOMEMADE</h4>
                         <div className='gift-text'>
                           <ul>
                             <li>Cell phone</li>

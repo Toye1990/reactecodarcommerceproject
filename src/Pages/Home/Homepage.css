@@ -7,6 +7,7 @@
     flex-direction: row;
     align-items: center;
     gap: 25px;
+    margin-top: 50px;
 }
 
 
@@ -154,6 +155,7 @@ font-size: 12px;
     color: #fff;
 }
 
+/* electronic section*/
 .electronic-container{
     margin-top: 60px;
     background-color: #f4f8f9;
@@ -349,7 +351,7 @@ ul li{
 }
 
 .fashionsec1{
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
    
 }
 
@@ -538,7 +540,7 @@ ul li{
     flex-direction: row;
     padding-left: 5%;
     padding-right: 50px;
-    padding-top: 40px;
+    padding-top: 140px;
 }
 
 .gift-text ul{
@@ -658,7 +660,7 @@ ul li{
     flex-direction: row;
     padding-left: 5%;
     padding-right: 50px;
-    padding-top: 40px;
+    padding-top: 160px;
     margin-bottom: 10px;
 }
 
@@ -792,7 +794,7 @@ ul li{
     background-color: #b01e22;
     align-items: center;
     justify-content: space-around;
-    margin-top: 400px;
+    margin-top: 550px;
     padding-top: 140px;
     padding-bottom: 60px;
     color: white;
@@ -820,3 +822,1429 @@ ul li{
 ::placeholder{
     text-align: left;
 }
+
+
+
+
+
+
+
+
+
+
+/* ======================= */
+/* MEDIA QUERIES FOR SMALL SCREENS for Arrival section*/
+/* ======================= */
+
+/* Phones: 360px to 480px */
+@media screen and (max-width: 480px) {
+  .arrival-section {
+    flex-direction: column;
+    padding: 80px 15px;
+    gap: 40px;
+    padding: 40px 30px;
+  }
+
+  .arrival-left,
+  .arrival-right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .arrival-icon-text1,
+  .arrival-icon-text2 {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .line1,
+  .line2 {
+    width: 100%;
+  }
+
+  .newarrival-container {
+    margin-top: 20px;
+  }
+
+  .tab0rder1 {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .order-img img {
+    width: 60px;
+  }
+
+  .order-text h4 {
+    font-size: 14px;
+  }
+
+  .order-text h6 {
+    font-size: 13px;
+  }
+
+  .slider {
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .slide-img img {
+    width: 120px !important;
+  }
+
+  .smalltext {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  .newarrival-container .viewall {
+    justify-content: center;
+    font-size: 13px;
+  }
+}
+
+/* Small Tablets: 481px to 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .arrival-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 50px;
+  }
+
+  .arrival-left,
+  .arrival-right {
+    width: 90%;
+  }
+
+  .arrival-icon-text1,
+  .arrival-icon-text2 {
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .line1,
+  .line2 {
+    width: 100%;
+  }
+
+  .tab0rder1 {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .order-img img {
+    width: 80px;
+  }
+
+  .order-text h4 {
+    font-size: 16px;
+  }
+
+  .slider {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .slide-img img {
+    width: 160px !important;
+  }
+
+  .smalltext {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .newarrival-container .viewall {
+    justify-content: flex-end;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================== */
+/* 📱 MEDIA QUERIES FOR SMALL SCREENS for Electronice Section*/
+/* =========================================== */
+
+/* For small phones (up to 480px wide) */
+@media screen and (max-width: 480px) {
+  .electronic-container {
+    margin-top: 0px;
+    height: auto;
+    padding: 10px 10px;
+  }
+
+  .electronic-topline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  h4{
+    width: 650px;
+    display: flex;
+    font-size: 18px;
+    margin: auto;
+  }
+
+  .electron-text ul {
+    display: none;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .gridcolumn {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .gridset {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .g-col-6 {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .g-col-6 img {
+    width: 150px !important;
+    margin-bottom: 10px;
+  }
+
+  .grid-text {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .grid-text h6 {
+    font-size: 14px;
+  }
+
+  .grid-text p {
+    font-size: 13px;
+  }
+
+  .grid-text button {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+
+  .gridbox img {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-boxe {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    gap: 15px;
+  }
+
+  .gridme1 img,
+  .gridme2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+/* For small tablets (481px to 768px wide) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .electronic-container {
+    margin-top: 20px;
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .electronic-topline {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 0px;
+  }
+
+.electron-text ul{
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .gridcolumn {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .gridset {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .g-col-6 {
+    width: 80%;
+    flex-direction: row;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .g-col-6 img {
+    width: 120px !important;
+  }
+
+  .grid-text h6 {
+    font-size: 15px;
+  }
+
+  .grid-text p {
+    font-size: 14px;
+  }
+
+  .grid-boxe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .gridme1 img,
+  .gridme2 img {
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+/* Medium tablets and small laptops (769px–1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .electronic-container {
+    height: auto;
+    padding: 60px 40px;
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .g-col-6 {
+    width: 45%;
+  }
+
+  .grid-boxe {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .gridme1 img,
+  .gridme2 img {
+    width: 45%;
+    height: auto;
+  }
+}
+
+
+
+/* =========================================== */
+/* 📱 MEDIA QUERIES FOR SMALL SCREENS for fashion section*/
+/* =========================================== */
+
+/* === For very small phones (max-width: 480px) === */
+@media screen and (max-width: 480px) {
+
+  .fashion-container {
+    height: auto;
+    padding-bottom: 50px;
+    margin-top: 100px;
+  }
+
+  .fashion-topline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .fashion-topline h4 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .fashion-text ul {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .fashion-text ul li {
+    font-size: 13px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .gridcolumn {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .gridset {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .g-col-6 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .g-col-6 img {
+    width: 120px !important;
+    margin-bottom: 10px;
+  }
+
+  .grid-text {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .grid-text h6 {
+    font-size: 14px;
+  }
+
+  .grid-text p {
+    font-size: 13px;
+  }
+
+  .grid-text button {
+    font-size: 13px;
+    padding: 6px 15px;
+    margin-top: 5px;
+  }
+
+  .gridbox img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .fashion-box {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .fashionme1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+
+/* === For small tablets (481px–768px) === */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  .fashion-container {
+    height: auto;
+    padding-bottom: 60px;
+    margin-top: 120px;
+  }
+
+  .fashion-topline {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+  }
+
+  .fashion-topline h4 {
+    font-size: 20px;
+  }
+
+  .fashion-text ul {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .fashion-text ul li {
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .gridcolumn {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .gridset {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .g-col-6 {
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .g-col-6 img {
+    width: 100px !important;
+  }
+
+  .grid-text h6 {
+    font-size: 15px;
+  }
+
+  .grid-text p {
+    font-size: 14px;
+  }
+
+  .grid-text button {
+    font-size: 14px;
+    padding: 6px 18px;
+  }
+
+  .fashion-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .fashionme1 img {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+  }
+}
+
+
+/* === For medium tablets and small laptops (769px–1024px) === */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .fashion-container {
+    height: auto;
+    padding-bottom: 70px;
+  }
+
+  .fashion-topline {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+  }
+
+  .fashion-text ul {
+    gap: 20px;
+  }
+
+  .gridcolumn {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .g-col-6 {
+    width: 45%;
+  }
+
+  .grid-text h6 {
+    font-size: 16px;
+  }
+
+  .fashion-box {
+    width: 90%;
+    margin: auto;
+  }
+
+  .fashionme1 img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+
+/* === For large desktops (above 1280px) — optional polish === */
+@media screen and (min-width: 1280px) {
+  fashion-container {
+    max-width: 1400px;
+    margin: 0px auto;
+  }
+
+  .fashion-topline h4 {
+    font-size: 24px;
+  }
+
+  .grid-text h6 {
+    font-size: 17px;
+  }
+
+  .grid-text button {
+    padding: 8px 20px;
+  }
+}
+
+
+/* ================================
+   Responsive Design for KitchenSection
+   ================================ */
+
+/* Tablets (screen width ≤ 1024px) */
+@media screen and (max-width: 1024px) {
+  .kitchen-container {
+    margin-top: 180px;
+    height: auto;
+  }
+
+  .kitchen-topline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-right: 20px;
+  }
+
+  .kitchen-text ul {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .gridset {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .g-col-6 {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .gridbox img {
+    width: 250px;
+    height: auto;
+  }
+
+  .grid-text {
+    padding: 10px 15px;
+  }
+
+  .kitchen-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  .kitchencol1,
+  .kitchencol2 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .kitchencol1 img,
+  .kitchencol2 img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile devices (screen width ≤ 768px) */
+@media screen and (max-width: 768px) {
+  .kitchen-container {
+    margin-top: 140px;
+    height: auto;
+  }
+
+  .kitchen-topline h4 {
+    font-size: 18px;
+  }
+
+  .kitchen-text ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .gridcolumn {
+    width: 100%;
+  }
+
+  .g-col-6 {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .g-col-6 img {
+    width: 150px !important;
+    margin-bottom: 10px;
+  }
+
+  .grid-text {
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .gridbox img {
+    width: 100%;
+    height: auto;
+  }
+
+  .kitchen-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .kitchencol1 img,
+  .kitchencol2 img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra Small devices (screen width ≤ 480px) */
+@media screen and (max-width: 480px) {
+  .kitchen-container {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .kitchen-topline h4 {
+    font-size: 20px;
+    margin-left: 40px;
+  }
+
+  .kitchen-text ul li {
+    font-size: 14px;
+    display: none;
+  }
+
+  .g-col-6 {
+    width: 100%;
+  }
+
+  .g-col-6 img {
+    width: 130px !important;
+  }
+
+  .grid-text h6 {
+    font-size: 14px;
+  }
+
+  .grid-text p {
+    font-size: 13px;
+  }
+
+  .grid-text button {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+
+  .kitchen-boxes {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+
+/* =========================================== */
+/* 📱 MEDIA QUERIES FOR GIFT & HOMEMADE SECTION */
+/* =========================================== */
+
+/* === Small phones (up to 480px) === */
+@media screen and (max-width: 480px) {
+
+  .gift-container {
+    margin-top: 40px;
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .gift-topline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .gift-topline h4 {
+    font-size: 20px;
+    margin-left: 40px;
+  }
+
+  .gift-text ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 0;
+    display: none;
+  }
+
+  .gift-text ul li {
+    font-size: 13px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .gridcolumn {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .gridset {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .g-col-6 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .g-col-6 img {
+    width: 120px !important;
+    margin-bottom: 10px;
+  }
+
+  .grid-text {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .grid-text small {
+    font-size: 12px;
+  }
+
+  .grid-text h6 {
+    font-size: 14px;
+  }
+
+  .grid-text p {
+    font-size: 13px;
+  }
+
+  .grid-text button {
+    font-size: 13px;
+    padding: 6px 15px;
+    margin-top: 5px;
+  }
+
+  .gridbox img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .gift-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .giftcol1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+
+/* === Small tablets (481px–768px) === */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  .gift-container {
+    margin-top: 150px;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .gift-topline {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 10px;
+  }
+
+  .gift-topline h4 {
+    font-size: 20px;
+  }
+
+  .gift-text ul {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .gift-text ul li {
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .gridcolumn {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .gridset {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .g-col-6 {
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .g-col-6 img {
+    width: 100px !important;
+  }
+
+  .grid-text {
+    text-align: left;
+  }
+
+  .grid-text h6 {
+    font-size: 15px;
+  }
+
+  .grid-text p {
+    font-size: 14px;
+  }
+
+  .grid-text button {
+    font-size: 14px;
+    padding: 6px 18px;
+  }
+
+  .gift-boxes {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .giftcol1 img {
+    width: 90%;
+    border-radius: 12px;
+  }
+}
+
+
+/* === Medium tablets (769px–1024px) === */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .gift-container {
+    height: auto;
+    padding-bottom: 70px;
+  }
+
+  .gift-topline {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 60px;
+  }
+
+  .gift-text ul {
+    gap: 20px;
+  }
+
+  .gridcolumn {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .g-col-6 {
+    width: 45%;
+  }
+
+  .grid-text h6 {
+    font-size: 16px;
+  }
+
+  .gift-boxes {
+    width: 90%;
+    margin: auto;
+  }
+
+  .giftcol1 img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+
+/* === Large desktops (above 1280px) === */
+@media screen and (min-width: 1280px) {
+
+  .gift-topline h4 {
+    font-size: 24px;
+  }
+
+  .grid-text h6 {
+    font-size: 17px;
+  }
+
+  .grid-text button {
+    padding: 8px 20px;
+  }
+}
+
+
+
+/* ================================
+   Responsive Design for LatestBlogs
+   ================================ */
+
+/* Tablets (≤ 1024px) */
+/*@media screen and (max-width: 1024px) {
+  .blog-container {
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .blog-topline {
+ margin-left: 40px;
+ margin-bottom: 20px;
+
+  }
+
+  .icon-text{
+    display: none;
+  }
+
+  .blogpack {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .colx {
+    width: 45%;
+    margin: 15px;
+  }
+
+  .colx img {
+    width: 100%;
+    height: auto;
+  }
+
+  .colx button {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+
+  .downtext-col {
+    padding: 30px 20px;
+  }
+
+  .downimgbox img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .slidebuttons .leftbutton {
+    left: -900px;
+    width: ;
+
+  }
+
+  .rightbutton {
+    right: -600px;
+  }
+
+  .slidebuttons{
+    gap: 70px;
+  }
+
+  .icontextcol {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .col {
+    width: 45%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+*/
+/* Mobile (≤ 768px) */
+@media screen and (max-width: 768px) {
+  .blog-container {
+    margin-top: 140px;
+    height: auto;
+  }
+
+  .blog-topline {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 0 20px;
+  }
+
+  .blogpack {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .colx {
+    width: 90%;
+    margin: 0;
+  }
+
+  .colx .text-boxes h3 {
+    font-size: 16px;
+  }
+
+  .Datetime {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+  }
+
+  .colx button {
+    font-size: 12px;
+    padding: 10px 25px;
+  }
+
+  .downtext-col {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .textlitle {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .downimgbox {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .downimgbox img {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #b01e22;
+  }
+
+  .slidebuttons {
+    top: 70px;
+  }
+
+  .leftbutton,
+  .rightbutton {
+    position: static;
+    margin: 10px 8px;
+  }
+
+  .icontextcol {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .col {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imgicon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .textforicon h6 {
+    font-size: 14px;
+  }
+
+  .textforicon small {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .blog-container {
+    margin-top: 40px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .blog-topline h4 {
+    font-size: 20px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  .icon-text{
+    display: none;
+  }
+
+  .colx {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .colx .text-boxes h3 {
+    font-size: 15px;
+  }
+
+  .colx button {
+    font-size: 11px;
+    padding: 8px 20px;
+  }
+
+  .textlitle {
+    font-size: 14px;
+  }
+
+  .downimgbox img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icontextcol {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .textforicon h6 {
+    font-size: 13px;
+  }
+
+  .textforicon small {
+    font-size: 11px;
+  }
+
+  .rightbutton{
+    right: -350px;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+  .leftbutton{
+    left: -350px;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.slidebuttons{
+    position: absolute;
+    top: 110px;
+    display: flex;
+    gap: 90px;
+}
+
+}
+
+
+
+/*newletter media css */
+
+/* Tablets (≤ 1024px) */
+@media screen and (max-width: 1024px) {
+  .newsletter {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    padding: 100px 60px;
+    gap: 30px;
+  }
+
+  .inputtext {
+    width: 320px;
+  }
+
+  .signupage button {
+    width: 110px;
+  }
+}
+
+/* Medium Devices (≤ 768px) */
+@media screen and (max-width: 768px) {
+  .newsletter {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    margin-top: 400px;
+    height: auto;
+  }
+
+  .newsletter h3 {
+    font-size: 22px;
+  }
+
+  .newsletter small {
+    font-size: 13px;
+  }
+
+  .signupage form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .inputtext {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .signupage button {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+/* Small Phones (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .newsletter {
+    padding: 10px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .newsletter h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .newsletter small {
+    font-size: 11px;
+  }
+
+  .inputtext {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .signupage button {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Devices (≤ 360px) */
+@media screen and (max-width: 360px) {
+  .newsletter {
+        margin-top: 10px;
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+
+  .newsletter h3 {
+    font-size: 18px;
+  }
+
+  .inputtext {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .signupage button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  
+}
+
+
+

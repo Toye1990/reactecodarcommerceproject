@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaAngleDown } from "react-icons/fa6";
 import './Header.css'
+//import Header from './Header';
 import { Link } from 'react-router-dom';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5"
 import { ContextData } from '../Context/useContext';
 
 
-const Topheader = () => {
+const Topheader = ({openMenu, menuOpen}) => {
   const {user, token, logout} = ContextData()
+/*
+  const [menuOpen, setMenuOpen] = useState(false)
 
+  const openMe = () =>{
+    setMenuOpen(!menuOpen)
+  }
+*/
   return (
     <>
       <div className='topheader'>
@@ -45,7 +54,9 @@ const Topheader = () => {
                 <div className='track'><FaAngleDown size={12}/> Track order</div>
             </div>
          </div>
+         <div className="menusmallsc" onClick={openMenu}>{menuOpen ? <GiHamburgerMenu size={23} /> : <IoClose size={23} />}</div>
       </div>
+        {/* ✅ Pass menuOpen to Header */}
     </>
   )
 }

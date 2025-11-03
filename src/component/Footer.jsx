@@ -5,6 +5,7 @@ import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { MdOutlinePhoneCallback } from "react-icons/md";
 import carvas from "../assets/images/chair.jpg"
 import bag from "../assets/images/bag2.jpg"
+import './Header.css'
 
 const Footer = () => {
   return (

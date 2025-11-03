@@ -27,7 +27,7 @@ const Bottomheader = () => {
         </div>
        
 
-      <div className="search-cart">
+     <div className="search-cart">
          <div className="searchbox gridsearch">
           <div className="inputbox ">
             <input
@@ -42,7 +42,10 @@ const Bottomheader = () => {
         
 
 
-      </div> 
+      </div>
+
+      
+
 
          <div className="cartbox">
              <div className="cartcase">

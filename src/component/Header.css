@@ -22,6 +22,10 @@ header{
     padding: 25px 30px;
 }
 
+.menusmallsc{
+    display: none;
+  }
+
 .menu{
     display: none;
     align-items: left;
@@ -143,7 +147,7 @@ input{
     padding-left: 20px;
     font-size: 14px;
 }
-
+/*bottomheader style*/
 .cartbox{
     display: flex;
     flex-direction: row;
@@ -693,7 +697,845 @@ ul li a{
     margin-left: 10px;
 }
 
+.search-box {
+  max-width: 600px;
+  margin-left: 340px;
+}
 
+.search-input {
+  flex: 1;
+  min-width: 300px;
+  height: 45px;
+  font-size: 1rem;
+}
+
+.search-btn {
+  height: 45px;
+  white-space: nowrap;
+}
+
+/* 🧠 Responsive tweak for very small screens (≤ 360px) */
+@media (max-width: 360px) {
+  .search-box {
+    flex-direction: column !important;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}
+
+
+/* ============================================================
+   SMALL DEVICES - PHONES (Up to 480px)
+   ============================================================ */
+@media screen and (max-width: 480px) {
+  /* Header & Top Section */
+  header {
+    height: auto;
+  }
+
+  .topheader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .bottomheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .menu-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sitelogo img {
+    width: 90px;
+    height: auto;
+  }
+
+  .search-cart {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .inputbox {
+    width: 100%;
+    display: flex;
+  }
+
+  .button1 {
+    flex: 1;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .button2 {
+    width: 80px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .cartbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cartrectangle {
+    width: 25px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  /* Navbar */
+  .navbar nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .sidemenu {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  /* Dropdown */
+  .dropdown-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .dropdown-container div {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .carousel-text {
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .carousel-text h1 {
+    font-size: 24px;
+  }
+
+  .carousel-text h3 {
+    font-size: 16px;
+  }
+
+  .carousel-text p {
+    width: 100%;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .btn {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Hero Gallery */
+  .hero-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .smallhero {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .hero-text {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .hero-text p,
+  .saletext {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .hero-img img {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-col ul {
+    padding: 0;
+  }
+}
+
+/* ============================================================
+   MEDIUM DEVICES - PHONES LANDSCAPE / SMALL TABLETS (481px–768px)
+   ============================================================ */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .bottomheader {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .search-cart {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .inputbox {
+    width: 10%;
+  }
+
+  .button1 {
+    width: 70%;
+  }
+
+  .button2 {
+    width: 30%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sidemenu {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .carousel-text {
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .carousel-text p {
+    width: 90%;
+  }
+
+  .hero-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .smallhero {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .hero-img img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================================
+   TABLETS - (769px–1024px)
+   ============================================================ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .bottomheader {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px 40px;
+    gap: 15px;
+  }
+
+  .search-cart {
+    gap: 80px;
+  }
+
+  .button1,
+  .button2 {
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .smallhero {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* =========================
+   📱 MEDIA QUERIES FOR 360PX WIDTH (TYPICAL SMARTPHONES)
+   ========================= */
+@media (max-width: 360px) {
+  /* General container */
+  .container-1 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .topheader{
+    position: relative;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  /* Navbar */
+   /*.navbar nav .navlist {
+     display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: -300px;
+    background-color: black;
+    width: 230px;
+    height: 250px;
+    transition: top 0.4s ease;
+    padding: 15px;
+  }
+/*
+  .navbar nav .navlist.open {
+    top: 50px; /* Slide down when open 
+  }
+*/
+
+.navbar nav .navlist {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  width: 230px;
+  height: 250px;
+  padding: 15px;
+  transform: translateY(-300px); /* hide off-screen */
+  transition: tranform 0.7s ease;
+  z-index: 1000;
+}
+
+.navbar nav .navlist.open {
+  display: none; /* slide down into view */
+}
+
+
+ nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+  .navbar nav .sidemenu {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f7f7f7;
+  }
+
+  .navbar nav .sidemenu .sidetext {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .navbar nav .sidemenu .close-icon svg {
+    font-size: 20px;
+  }
+
+  /* Dropdown menu */
+  .dropdown-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-container.open {
+     display: none;
+  }
+
+  .dropdown-container div {
+    padding: 12px 18px;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+  }
+
+  /* Hero section */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .slide {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-inner .carousel-item {
+    height: 280px;
+  }
+
+  .carousel-text {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .carousel-text h1 {
+    font-size: 24px;
+  }
+
+  .carousel-text h3 {
+    font-size: 16px;
+  }
+
+  .carousel-text h5 {
+    font-size: 14px;
+  }
+
+  .carousel-text p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .carousel-text button {
+    font-size: 13px;
+    padding: 6px 16px;
+  }
+
+  /* Hero gallery (two small heroes stacked vertically) */
+  .hero-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .smallhero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+
+  .hero-text .saletext {
+    font-size: 13px;
+  }
+
+  .hero-text h6 {
+    font-size: 12px;
+    color: #555;
+  }
+
+  .hero-img img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+   .search-cart {
+    flex-direction: column; /* stack vertically for small screens */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 30px 10px;
+  }
+
+  /* 🔤 Search input box */
+  .inputbox {
+    width: 100%;
+    max-width: 880px !important;
+    height: 38px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  ::placeholder{
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  /* 🧭 Buttons alignment */
+  .button1{
+    width: 700%;
+    max-width: 860px;
+    height: 36px;
+    font-size: 13px;
+  }
+  
+  .button2 {
+    width: 100%;
+    max-width: 60px;
+    height: 36px;
+    font-size: 13px;
+     border-radius: 0px 5px 5px 0px;
+  }
+  
+
+  /* 🧩 If both buttons are in one row inside search-cart */
+  .search-cart-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .menusmallsc{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: rgb(255, 255, 255)(255, 255, 255);
+    cursor: pointer;
+  }
+
+
+
+}
+
+
+/* ================================
+   Footer Section (Base Styles)
+   ================================ */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #111;
+  color: #f5f5f5;
+  padding: 80px 100px;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 18px;
+  position: relative;
+}
+
+.footer-col h3::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #b01e22;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #b01e22;
+  text-decoration: underline;
+}
+
+/* ============ Logo & Description ============ */
+.imgtext {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footertext {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footericoncover {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.footericoncover small {
+  color: #ccc;
+}
+
+/* ============ Footer Store Section ============ */
+.footer-store {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-texts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-texts img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.text-combine small {
+  color: #b01e22;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.text-combine h4 {
+  font-size: 14px;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.text-combine h6 {
+  color: #fff;
+  font-size: 13px;
+}
+
+.text-combine h6 span {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+/* ================================
+   Responsive Breakpoints
+   ================================ */
+
+/* Tablets (≤ 1024px) */
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 60px 60px;
+    gap: 30px;
+  }
+
+  .footer-col {
+    flex: 1 1 45%;
+  }
+
+  .footer-col h3 {
+    font-size: 16px;
+  }
+
+  .footertext {
+    font-size: 13px;
+  }
+
+  .footer-store {
+    gap: 10px;
+  }
+
+  .footer-texts img {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 30px;
+    gap: 50px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-col h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  .footertext {
+    font-size: 13px;
+  }
+
+  .footericoncover small {
+    font-size: 12px;
+  }
+
+  .footer-store {
+    flex-direction: column;
+  }
+
+  .footer-texts {
+    gap: 15px;
+  }
+
+  .footer-texts img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .text-combine h4 {
+    font-size: 14px;
+  }
+
+  .text-combine h6 {
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Devices (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .imgtext {
+    width: 120px;
+  }
+
+  .footer-col h3 {
+    font-size: 15px;
+  }
+
+  .footer-col ul li a {
+    font-size: 13px;
+  }
+
+  .footer-texts img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .text-combine small {
+    font-size: 11px;
+  }
+
+  .text-combine h4 {
+    font-size: 13px;
+  }
+
+  .text-combine h6 {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+/*
 @media screen and (max-width: 400px){
     
     
@@ -831,9 +1673,91 @@ gap: 7px;
 }
 
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .bottomheader {
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 25px;
+    gap: 20px;
+  }
+
+  .search-cart {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .inputbox {
+    width: 80%;
+  }
+
+  .button1 {
+    width: 70%;
+  }
+
+  .button2 {
+    width: 30%;
+  }
+
+  .cartbox {
+    justify-content: center;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-text {
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    width: 90%;
+  }
+}
+
+/* =========================================
+   TABLETS & SMALL LAPTOPS
+   ========================================= */
+   /*
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .bottomheader {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px 40px;
+  }
+
+  .search-cart {
+    gap: 100px;
+  }
+
+  .inputbox input {
+    font-size: 15px;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 15px;
+  }
+
+  .hero-text {
+    padding: 0 100px;
+  }
+
+  .hero-text p {
+    width: 80%;
+  }
+}
 
 
 
 
-
-
+*/

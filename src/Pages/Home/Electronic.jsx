@@ -53,7 +53,7 @@ const Electronic = () => {
     <>
       <div className="electronic-container">
           <div className='electronic-topline'>
-            <h4>ELECTRONIC & COMPUTERS</h4>
+            <h4 className='h-text'>ELECTRONIC & COMPUTERS</h4>
             <div className='electron-text'>
               <ul>
                 <li>Cell phone</li>
