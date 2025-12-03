@@ -120,7 +120,7 @@ const Electronic = () => {
                   <small>Digial, Electronic</small>
                   <h6>{clipSentence(item.title, 20)}</h6>
                   <p>${item.price}</p>
-                  <button type='button' onClick={() =>{ addToCart()}}>Add to cart</button>
+                  <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ const Electronic = () => {
                   <small>Digial, Electronic</small>
                   <h6>{clipSentence(item.title, 20)}</h6>
                   <p>${item.price}</p>
-                  <button type='button' onClick={()=>{addCart(item)}}>Add to cart</button>
+                  <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                 </div>
               </div>
             ))

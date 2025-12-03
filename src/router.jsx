@@ -11,6 +11,7 @@ import Cart from "./Pages/cart/Cart";
 import Protectedroute from "./Hooks/Protectedroute";
 import Checkout from "./Pages/checkoutpage/Checkout";
 import Productdashboard from "./Pages/dashboard/Productdashboard";
+import Contactus from "./Pages/Contact/Contactus";
 //import Productdash from "./Pages/dashboard/Productdash";
 
 
@@ -36,5 +37,6 @@ export const router = createBrowserRouter([
     )},
     {path: "/signin", element: <Signin/>},
     {path: "/register", element: <Register/>},
+    {path: "/contact", element: <Contactus/>},
 
 ])

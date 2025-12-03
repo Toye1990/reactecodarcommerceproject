@@ -111,7 +111,7 @@ const FashionClothing = () => {
                             <small>Digial, Electronic</small>
                             <h6>{clipSentence(item.title)}</h6>
                             <p>${item.price}</p>
-                            <button type='button' onClick={()=>{addCart(item)}}>Add to cart</button>
+                            <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                           </div> 
                         </div>
                       ))

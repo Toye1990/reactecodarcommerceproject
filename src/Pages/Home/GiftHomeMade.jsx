@@ -13,7 +13,7 @@ import { ContextData } from '../../Context/useContext'
 
 const GiftHomeMade = () => {
 
-   const { addCart } = ContextData()
+   const { addToCart } = ContextData()
 
   function clipSentence(sentence, length) {
       if (sentence.length <= length) {
@@ -84,7 +84,7 @@ const GiftHomeMade = () => {
                               <small>Digial, Electronic</small>
                               <h6>{clipSentence(item.title)}</h6>
                               <p>{item.price}</p>
-                              <button type='button' onClick={() => addCart()}>Add to cart</button>
+                              <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                             </div>
                           </div>
                           ))
@@ -110,7 +110,7 @@ const GiftHomeMade = () => {
                               <small>Digial, Electronic</small>
                               <h6>{clipSentence(item.title)}</h6>
                               <p>{item.price}</p>
-                              <button type='button'>Add to cart</button>
+                              <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                             </div>
                           </div>
                         ))

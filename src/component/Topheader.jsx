@@ -24,7 +24,7 @@ const Topheader = ({ openMenu, menuOpen }) => {
             <div className="signintext">
               <div className="textandiconleft">
                 <div className="english">
-                  English <FaAngleDown className="down4" size={12} />
+                  <Link to="/">ComplexStores</Link> 
                 </div>
                 <div className="pipe1"></div>
                 <div className="usd">

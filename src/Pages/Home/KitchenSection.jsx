@@ -9,9 +9,12 @@ import kitchbanner1 from "../../assets/images/kitchbanner1.jpg"
 import kitchbanner2 from "../../assets/images/kitchbanner2.jpg"
 import Products from '../../Hooks/Products'
 import Loader from '../../component/Loader/Loader'
-
+import { ContextData } from '../../Context/useContext'
+ 
 
 const KitchenSection = () => {
+
+  const {addToCart} = ContextData()
   
   function clipSentence(sentence, length) {
     if (sentence.length <= length) {
@@ -79,7 +82,7 @@ const KitchenSection = () => {
                         <small>Digial, watch</small>
                         <h6>{clipSentence(item.title)}</h6>
                         <p>${item.price}</p>
-                        <button type='button'>Add to cart</button>
+                        <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                       </div>
                     </div>
                       ))
@@ -107,7 +110,7 @@ const KitchenSection = () => {
                         <small>furniture, chair</small>
                         <h6>{clipSentence(item.title)}</h6>
                         <p>${item.price}</p>
-                        <button type='button'>Add to cart</button>
+                        <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
                       </div>
                     </div>
                    ))

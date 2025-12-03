@@ -148,10 +148,10 @@ if(response && response.status === 200 && response.data){
     
        </div>
 
-       <div>Name: {showData.firstname}</div>
+      {/*<div>Name: {showData.firstname}</div>
        <div>Email: {showData.email}</div>
         <div>password: {showData.password}</div>
-         <div>confirmpassword: {showData.confirmpassword}</div>
+         <div>confirmpassword: {showData.confirmpassword}</div>*/}
      </div>
     </>
   )

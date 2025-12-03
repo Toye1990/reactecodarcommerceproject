@@ -84,11 +84,6 @@ const Header = () => {
                   </Link>{" "}
                 </li>
                 <li>
-                  <Link to="/page">
-                    PAGE <FaAngleDown size={12} />
-                  </Link>{" "}
-                </li>
-                <li>
                   <Link to="/contact">
                     CONTACT US <FaAngleDown size={12} />
                   </Link>{" "}

@@ -10,6 +10,13 @@ header{
     height: 40vh;
 }
 
+.textandiconleft a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 
 .topheader{
     background: linear-gradient(to right, #1a2530 0%, #1a2530 100%);

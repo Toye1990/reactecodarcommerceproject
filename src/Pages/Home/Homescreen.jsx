@@ -15,7 +15,6 @@ const Homescreen = () => {
   return (
     <>
       <Header/>
-      <HeroSection/>
       <NewArrival/>
       <Electronic/>
       <FashionClothing/>
