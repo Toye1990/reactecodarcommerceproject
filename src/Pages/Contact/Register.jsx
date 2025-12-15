@@ -3,7 +3,8 @@ import '../Contact/Contacting.css'
 import toast from 'react-hot-toast'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import { ContextData } from '../../Context/useContext'
+//import { ContextData } from '../../Context/useContext'
+import Loader from '../../component/Loader/Loader'
 
 
 
@@ -11,7 +12,9 @@ import { ContextData } from '../../Context/useContext'
 const Register = () => {
 
   const navigate = useNavigate()
- const {addUser, setMytoken} = ContextData()
+ //const {addUser, setMytoken} = ContextData()
+
+ const [Loader, setLoader] = useState(false)
 
   const [formData, setFormData] = useState({
     firstname: "",
@@ -48,6 +51,7 @@ const Register = () => {
   }
 
   const createAct = async() =>{
+    setLoader(true)
     try{
         const emptyfield = []
 
@@ -71,7 +75,7 @@ const Register = () => {
       emptyfield.forEach((item)=>{
         toast.error(`${item} cannot be empty`)
       })
-
+       setLoader(false)
       return;
     }
 
@@ -91,14 +95,15 @@ const response =  await axios.post("http://localhost:2233/api/v1/register", form
      
 if(response && response.status === 200 && response.data){
 
-  await addUser(response.data.user)
-  await setMytoken(response.data.token)
+  //await addUser(response.data.user)
+  //await setMytoken(response.data.token)
 
   toast.success("register successfully")
   navigate("/Signin")
     return;
 }else{
   toast.error("error occurred while creating registration")
+   setLoader(false)
   return
 }
     
@@ -140,9 +145,15 @@ if(response && response.status === 200 && response.data){
             value={formData.confirmpassword} onChange={handchange}
            />
            
-           <div className='button' onClick={createAct}>
+           {Loader? (
+            <div className='button'>
             submit
            </div>
+           ) : (
+            <div className='button' onClick={createAct}>
+            submit
+           </div>
+           )}
 
        </form>
     

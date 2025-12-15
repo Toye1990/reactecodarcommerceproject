@@ -4,9 +4,12 @@ import "./Productdashboard.css";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "../../component/Footer";
+import { ContextData } from "../../Context/useContext";
 
 const Productdashboard = () => {
   const API_BASE_URL = "http://localhost:2233/api/v1";
+  const {logout} = ContextData()
 
   const [formData, setFormData] = useState({
     title: "",
@@ -113,6 +116,9 @@ const Productdashboard = () => {
           <a className="navbar-brand d-block d-md-none" href="#">
             Admin Panel
           </a>
+          <div className="dashtext">
+                            <Link to="/">ComplexStores</Link> 
+                          </div>
           <button
             className="navbar-toggler"
             type="button"
@@ -155,9 +161,9 @@ const Productdashboard = () => {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" onClick={logout}>
                       Logout
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -167,7 +173,7 @@ const Productdashboard = () => {
       </nav>
 
       <div className="sidebar bg-light border-end p-3 d-none d-md-block">
-        <h5 className="py-2 text-primary">E-Commerce Admin</h5>
+        <h5 className="py-2 text-primary">Admin</h5>
         <ul className="nav flex-column">
           <li className="nav-item">
             <a className="nav-link text-dark" href="#">

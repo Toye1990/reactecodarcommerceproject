@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../component/Header.css'
 //import { ContextData } from '../../Context/useContext'
 import toast from 'react-hot-toast'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import './checkout.css'
 import Header from '../../component/Header'
 import Footer from '../../component/Footer'
@@ -12,7 +12,10 @@ import Topheader from '../../component/Topheader'
 const Checkout = () => {
 
   const navigate = useNavigate()
+  const location = useLocation()
  //const {addUser, setMytoken} = ContextData()
+
+
 
  const [payData, setPayData] = useState({
       firstname: "",
@@ -32,6 +35,17 @@ const handchange = (e) =>{
   })
 }
 
+const totalPrice = Number(location.state?.totalPrice) || 0
+
+
+ useEffect(() => {
+  setPayData(prev => ({
+    ...prev,
+    amount: totalPrice
+  }))
+}, [totalPrice])
+
+console.log("Checkout totalPrice:", totalPrice)
 const paymentslide = async() =>{
 
 try{
@@ -57,9 +71,9 @@ try{
     emptypath.push("address")
   }
 
-   if(!payData.amount || payData.amount.trim() === ""){
-    emptypath.push("amount")
-  }
+   if (payData.amount <= 0) {
+  emptypath.push("amount")
+}
 
 
   if(emptypath.length > 0){
@@ -149,7 +163,9 @@ try{
           <h2>Payment Method</h2>
           <div className="payment-method">
             <label><input type="radio" name="payment" checked /> Bank Transfer</label>
-            <input type="number" value={payData.amount} onChange={handchange} name='amount' placeholder="amount" required/>
+            <input type="number" name="amount" value={payData.amount} readOnly/>
+
+            {/*<input type="number" value={payData.amount} onChange={handchange} name='amount' placeholder="amount" required/>*/}
           </div>
 
           <div className="place-order-btn" onClick={paymentslide}>Place Order</div>

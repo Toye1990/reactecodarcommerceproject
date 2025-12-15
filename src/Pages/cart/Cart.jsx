@@ -1,32 +1,32 @@
-import React from 'react'
-import '../../component/Header.css'
+import React from "react";
+import "../../component/Header.css";
 //import { ContextData } from '../../Hooks/Formcontext'
-import { Link } from 'react-router-dom'
-import Products from '../../Hooks/Products'
-import Loader from "../../component/Loader/Loader"
-import { ContextData } from '../../Context/useContext'
+import { Link } from "react-router-dom";
+import Products from "../../Hooks/Products";
+import Loader from "../../component/Loader/Loader";
+import { ContextData } from "../../Context/useContext";
 import { CiSquareRemove } from "react-icons/ci";
-import './Cart.css'
+import "./Cart.css";
+import Checkout from "../checkoutpage/Checkout";
 
 //import { MdStar } from "react-icons/md";
 
 const Cart = () => {
-   const {cart, removeCart} = ContextData()
+  const { cart, removeCart } = ContextData();
 
+  function clipSentence(sentence, length) {
+    if (sentence.length <= length) {
+      return sentence;
+    }
 
-   function clipSentence(sentence, length) {
-  if (sentence.length <= length) {
-    return sentence;
+    return `${sentence.substring(0, length)}...`;
   }
 
-  return `${sentence.substring(0, length)}...`;
-}
-
-function formatRate(rate){
-  const formated = Math.ceil(rate)
-  const multiply = Array.from({length: formated})
-  return multiply;
-}
+  function formatRate(rate) {
+    const formated = Math.ceil(rate);
+    const multiply = Array.from({ length: formated });
+    return multiply;
+  }
 
   if (cart.length === 0) {
     return (
@@ -69,9 +69,10 @@ function formatRate(rate){
                       Total <span>$0</span>
                     </li>
                   </ul>
-                  <Link to="/checkout" className="primary-btn">
-                    Proceed to checkout
-                  </Link>
+                 <Link to="/checkout" state={{ totalPrice }} className="primary-btn">
+                  Proceed to checkout
+                 </Link>
+
                 </div>
               </div>
             </div>
@@ -83,43 +84,53 @@ function formatRate(rate){
 
   const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
 
-
+  //<Checkout totalPrice={totalPrice}/>
 
   const { data, isLoading, error } = Products();
-  if(isLoading){
+  if (isLoading) {
     // return <div className="d-flex justify-content-center align-items-center">
-      return <Loader/>
+    return <Loader />;
     // </div>;
   }
 
-
   if (error) {
-    return <div className="d-flex justify-content-center align-items-center" style={{height: "60vh"}}>
-      <div>Error Occured</div>
-    </div>;
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "60vh" }}
+      >
+        <div>Error Occured</div>
+      </div>
+    );
   }
 
-  if(!data || !data.data){
-    return <div className="d-flex justify-content-center align-items-center" style={{height: "60vh"}}>
-    <div>Product is unavaliable</div>
-  </div>;
+  if (!data || !data.data) {
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "60vh" }}
+      >
+        <div>Product is unavaliable</div>
+      </div>
+    );
   }
 
-  if(data.data.length === 0){
-    return <div className="d-flex justify-content-center align-items-center" style={{height: "60vh"}}>
-    <div>Product is empty</div>
-  </div>;
+  if (data.data.length === 0) {
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "60vh" }}
+      >
+        <div>Product is empty</div>
+      </div>
+    );
   }
 
+  const products = data.data;
 
-  const products = data.data
-
-  
   return (
     <>
-
-
-   <section className="shopping-cart spad">
+      <section className="shopping-cart spad">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
@@ -138,7 +149,11 @@ function formatRate(rate){
                       <tr key={index}>
                         <td className="product__cart__item">
                           <div className="product__cart__item__pic">
-                            <img src={item.image} className="img-fluid" alt="" />
+                            <img
+                              src={item.image}
+                              className="img-fluid"
+                              alt=""
+                            />
                           </div>
                           <div className="product__cart__item__text">
                             <h6>{item.title}</h6>
@@ -154,7 +169,13 @@ function formatRate(rate){
                         </td>
                         <td className="cart__price">${item.price}</td>
                         <td className="cart__close">
-                          <CiSquareRemove size={30} className='remove' onClick={()=>{removeCart(index)}}/>
+                          <CiSquareRemove
+                            size={30}
+                            className="remove"
+                            onClick={() => {
+                              removeCart(index);
+                            }}
+                          />
                         </td>
                       </tr>
                     ))}
@@ -164,11 +185,13 @@ function formatRate(rate){
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-6">
                   <div className="continue__btn">
-                    <Link to="/" className='shopping'>Continue Shopping</Link>
+                    <Link to="/" className="shopping">
+                      Continue Shopping
+                    </Link>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6">
-                 {/* <div className="continue__btn update__btn">
+                  {/* <div className="continue__btn update__btn">
                     <a href="#">
                       <i className="fa fa-spinner"></i> Update cart
                     </a>
@@ -194,7 +217,11 @@ function formatRate(rate){
                     Total <span>$ {totalPrice.toFixed(2)}</span>
                   </li>
                 </ul>
-                <Link to="/checkout" className="primary-btn">
+                <Link
+                  to="/checkout"
+                  state={{ totalPrice }}
+                  className="primary-btn"
+                >
                   Proceed to checkout
                 </Link>
               </div>
@@ -202,13 +229,8 @@ function formatRate(rate){
           </div>
         </div>
       </section>
-
-
-    
     </>
   );
+};
 
-
-}
-
-export default Cart
+export default Cart;

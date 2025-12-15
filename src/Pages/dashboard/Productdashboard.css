@@ -40,3 +40,13 @@
         .my-btn{
             display: flex;
         }
+
+        .dashtext{
+            margin-left: 36px;
+        }
+        
+        .dashtext a{
+          text-decoration: none;
+          color: white;
+          font-size: 25px;
+        }
