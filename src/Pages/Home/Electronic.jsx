@@ -20,8 +20,8 @@ const Electronic = () => {
 
 const { addToCart } = ContextData()
   
-/*const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+//const [products, setProducts] = useState([]);
+  //const [loading, setLoading] = useState(true);
   
   function clipSentence(sentence, length) {
     if (sentence.length <= length) {
@@ -39,7 +39,7 @@ const { addToCart } = ContextData()
 
 
 
-  useEffect(() => {
+ /* useEffect(() => {
     const fetchProducts = async () => {
       try {
         // token = localStorage.getItem("token");
