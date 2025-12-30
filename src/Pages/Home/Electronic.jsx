@@ -16,11 +16,13 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
-const { addToCart } = ContextData()
 const Electronic = () => {
 
+const { addToCart } = ContextData()
   
-
+const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
   function clipSentence(sentence, length) {
     if (sentence.length <= length) {
       return sentence;
@@ -36,8 +38,6 @@ const Electronic = () => {
   }
 
 
-const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
