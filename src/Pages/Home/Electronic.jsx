@@ -20,7 +20,7 @@ const Electronic = () => {
 
 const { addToCart } = ContextData()
   
-const [products, setProducts] = useState([]);
+/*const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   
   function clipSentence(sentence, length) {
@@ -73,11 +73,11 @@ const [products, setProducts] = useState([]);
   if (products.length === 0) {
     return <h1>Product Empty!</h1>;
   }
-
+*/
 
   
 
-        /*const {data = [], isLoading, error} = Products()
+    const {data = [], isLoading, error} = Products()
         //const {data = [], isLoading, error} = Producttoken()
 
        if(isLoading){
@@ -93,9 +93,9 @@ const [products, setProducts] = useState([]);
 
        }
 
-       const prod = data.data.slice(0, 2)
+       const products = data.data.slice(0, 2)
        //const prod = data.data
-       console.log(prod)*/
+       console.log(products)
 
   return (
     <>
@@ -197,7 +197,7 @@ const [products, setProducts] = useState([]);
 
            <div className="grid text-left row-gap-0 col-gap-0 gridset" >
            {
-            prod.map((item)=>(
+            products.map((item)=>(
               <div className="g-col-6" key={item.id}>
               <div className='grid-img'><img src={item.image}/></div>
                 <div className='grid-text'>
