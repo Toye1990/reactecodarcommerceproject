@@ -16,10 +16,10 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
-
+const { addToCart } = ContextData()
 const Electronic = () => {
 
-  const { addToCart } = ContextData()
+  
 
   function clipSentence(sentence, length) {
     if (sentence.length <= length) {
