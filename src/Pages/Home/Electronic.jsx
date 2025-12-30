@@ -8,8 +8,12 @@ import phone1 from "../../assets/images/phonebanner2.jpg"
 import banner1 from "../../assets/images/bannercut1.jpg"
 import banner2 from "../../assets/images/bannercut2.jpg"
 import Products from '../../Hooks/Products'
+//import Justfile from '../../Hooks/Justfile'
+import Producttoken from '../../Hooks/Producttoken'
 import Loader from "../../component/Loader/Loader"
 import { ContextData } from '../../Context/useContext'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 
 
@@ -31,7 +35,50 @@ const Electronic = () => {
     return multiply;
   }
 
-        const {data = [], isLoading, error} = Products()
+
+const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        // token = localStorage.getItem("token");
+         const { token } = ContextData()
+
+        const res = await axios.get(
+          "https://nodecodarprojectbackend.onrender.com/api/v1/admin/fetchproduct",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        // ✅ THIS IS THE FIX
+        console.log("API RESPONSE:", res.data);
+        setProducts(res.data.userproducts);
+
+      } catch (error) {
+        console.log(error.response?.data || error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+
+  if (products.length === 0) {
+    return <h1>Product Empty!</h1>;
+  }
+
+
+  
+
+        /*const {data = [], isLoading, error} = Products()
+        //const {data = [], isLoading, error} = Producttoken()
 
        if(isLoading){
         return <Loader/>
@@ -46,8 +93,9 @@ const Electronic = () => {
 
        }
 
-       const products = data.data.slice(0, 2)
-       console.log(products)
+       const prod = data.data.slice(0, 2)
+       //const prod = data.data
+       console.log(prod)*/
 
   return (
     <>
@@ -114,10 +162,10 @@ const Electronic = () => {
         <div className='gridcolumn'>
             <div className="grid text-left row-gap-0 col-gap-0 gridset" >
           {products.map((item) =>(
-            <div className="g-col-6" key={item.id}>
-              <div className='grid-img'><img src={item.image}/></div>
+            <div className="g-col-6" key={item._id}>
+              <div className='grid-img'><img src={item.images}/></div>
                 <div className='grid-text'>
-                  <small>Digial, Electronic</small>
+                  <small>Electronics</small>
                   <h6>{clipSentence(item.title, 20)}</h6>
                   <p>${item.price}</p>
                   <button type='button' onClick={()=>{addToCart(item)}}>Add to cart</button>
@@ -149,7 +197,7 @@ const Electronic = () => {
 
            <div className="grid text-left row-gap-0 col-gap-0 gridset" >
            {
-            products.map((item)=>(
+            prod.map((item)=>(
               <div className="g-col-6" key={item.id}>
               <div className='grid-img'><img src={item.image}/></div>
                 <div className='grid-text'>

@@ -11,6 +11,7 @@ import Products from '../../Hooks/Products'
 //import { ContextData } from '../../Hooks/Formcontext'
 //import addCart from '../../Hooks/carthook'
 import { ContextData } from '../../Context/useContext'
+import Producttoken from '../../Hooks/Producttoken'
 
 
 const FashionClothing = () => {
@@ -33,6 +34,7 @@ const FashionClothing = () => {
   }
 
         const {data = [], isLoading, error} = Products()
+        //const {data = [], isLoading, error} = Producttoken()
 
        if(isLoading){
         return <Loader/>
@@ -46,9 +48,10 @@ const FashionClothing = () => {
         return <div className='d-flex align-items-center  justify-content-center'><h1>Product Empty!</h1></div>
 
        }
-
+       //const productmark = data.data
        const productmark = data.data.slice(2, 4)
        //const productmarket = data.data.slice(5, 7)
+       //const productmarket = data.data
        console.log(productmark)
 
 
@@ -80,7 +83,7 @@ const FashionClothing = () => {
                   <div className='gridcolumn'>
                       <div className="grid text-left row-gap-0 col-gap-0 gridset" >
                       {productmark.map((item) => (
-                        <div className="g-col-6" key={item._id}>
+                        <div className="g-col-6" key={item.id}>
                         <div className='grid-img'><img src={item.image}/></div>
                           <div className='grid-text'>
                             <small>Digial, Electronic</small>
