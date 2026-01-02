@@ -8,6 +8,7 @@ import { ContextData } from "../../Context/useContext";
 import { CiSquareRemove } from "react-icons/ci";
 import "./Cart.css";
 import Checkout from "../checkoutpage/Checkout";
+import Producttoken from "../../Hooks/Producttoken";
 
 //import { MdStar } from "react-icons/md";
 
@@ -86,14 +87,15 @@ const Cart = () => {
 
   //<Checkout totalPrice={totalPrice}/>
 
-  const { data, isLoading, error } = Products();
+  //const { data, isLoading, error } = Products();
+  /*const { data, isLoading, error } = Producttoken();
   if (isLoading) {
     // return <div className="d-flex justify-content-center align-items-center">
     return <Loader />;
     // </div>;
-  }
+  }*/
 
-  if (error) {
+  /*if (error) {
     return (
       <div
         className="d-flex justify-content-center align-items-center"
@@ -126,7 +128,8 @@ const Cart = () => {
     );
   }
 
-  const products = data.data;
+   const prod = data?.userproducts || [];
+       console.log("Products Array:", prod);*/
 
   return (
     <>
@@ -150,7 +153,7 @@ const Cart = () => {
                         <td className="product__cart__item">
                           <div className="product__cart__item__pic">
                             <img
-                              src={item.image}
+                              src={item.images?.[0]}
                               className="img-fluid"
                               alt=""
                             />

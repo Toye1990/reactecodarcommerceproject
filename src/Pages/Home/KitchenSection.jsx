@@ -8,6 +8,7 @@ import sidebanner2 from "../../assets/images/sidebanner2.jpg"
 import kitchbanner1 from "../../assets/images/kitchbanner1.jpg"
 import kitchbanner2 from "../../assets/images/kitchbanner2.jpg"
 import Products from '../../Hooks/Products'
+import Producttoken from '../../Hooks/Producttoken'
 import Loader from '../../component/Loader/Loader'
 import { ContextData } from '../../Context/useContext'
  
@@ -30,7 +31,8 @@ const KitchenSection = () => {
     return multiply;
   }
 
-        const {data = [], isLoading, error} = Products()
+        //const {data = [], isLoading, error} = Products()
+        const {data = [], isLoading, error} = Producttoken()
 
        if(isLoading){
         return <Loader/>
@@ -45,10 +47,9 @@ const KitchenSection = () => {
 
        }
 
-       const kichendata = data.data.slice(12, 14)
-       const kichendata2 = data.data.slice(14, 16)
-       console.log(kichendata)
-
+       const productmarks = data?.userproducts || []
+       const kichendata = productmarks.slice(1, 3)
+         console.log(kichendata)
   return (
     <>
       <div className="kitchen-container">
@@ -77,7 +78,7 @@ const KitchenSection = () => {
                     {
                       kichendata.map((item) =>(
                         <div className="g-col-6" key={item.id}>
-                    <div className='grid-img'><img src={item.image}/></div>
+                    <div className='grid-img'><img src={item.images[0]}/></div>
                       <div className='grid-text'>
                         <small>Digial, watch</small>
                         <h6>{clipSentence(item.title)}</h6>
@@ -103,9 +104,9 @@ const KitchenSection = () => {
       
                  <div className="grid text-left row-gap-0 col-gap-0 gridset" >
                  {
-                   kichendata2.map((item) =>(
+                   kichendata.map((item) =>(
                     <div className="g-col-6" key={item.id}>
-                    <div className='grid-img'><img src={item.image}/></div>
+                    <div className='grid-img'><img src={item.images[0]}/></div>
                       <div className='grid-text'>
                         <small>furniture, chair</small>
                         <h6>{clipSentence(item.title)}</h6>

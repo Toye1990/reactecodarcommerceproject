@@ -6,8 +6,8 @@ const Products = () => {
     
   return useQuery ({
      queryKey: ["all-product"],
-     //queryFn: () => axios.get("http://localhost:2233/api/v1/admin/fetchproduct"),
-     queryFn: () => axios.get("https://fakestoreapi.com/products"),
+     queryFn: () => axios.get("http://localhost:2233/api/v1/admin/fetchproduct"),
+     //queryFn: () => axios.get("https://fakestoreapi.com/products"),
      onError: (error) => {
        console.log(error)
      }

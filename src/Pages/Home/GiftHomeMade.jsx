@@ -9,6 +9,7 @@ import longbanner2 from "../../assets/images/longbanner2.jpg"
 //import banner2 from "../../assets/images/bannercut2.png"
 import Loader from '../../component/Loader/Loader'
 import Products from '../../Hooks/Products'
+import Producttoken from '../../Hooks/Producttoken'
 import { ContextData } from '../../Context/useContext'
 
 const GiftHomeMade = () => {
@@ -29,7 +30,8 @@ const GiftHomeMade = () => {
       return multiply;
     }
   
-          const {data = [], isLoading, error} = Products()
+          //const {data = [], isLoading, error} = Products()
+          const {data = [], isLoading, error} = Producttoken()
   
          if(isLoading){
           return <Loader/>
@@ -44,8 +46,8 @@ const GiftHomeMade = () => {
   
          }
   
-         const productmark = data.data.slice(7, 9)
-         const productmarket = data.data.slice(11, 13)
+         const productmarks = data?.userproducts || []
+       const productmark = productmarks.slice(0, 2)
          console.log(productmark)
   
   
@@ -79,7 +81,7 @@ const GiftHomeMade = () => {
                         {
                           productmark.map((item) =>(
                             <div className="g-col-6" key={item.id}>
-                          <div className='grid-img'><img src={item.image}/></div>
+                          <div className='grid-img'><img src={item.images[0]}/></div>
                             <div className='grid-text'>
                               <small>Digial, Electronic</small>
                               <h6>{clipSentence(item.title)}</h6>
@@ -103,9 +105,9 @@ const GiftHomeMade = () => {
             
                        <div className="grid text-left row-gap-0 col-gap-0 gridset" >
                        {
-                        productmarket.map((item) =>(
+                        productmark.map((item) =>(
                           <div className="g-col-6" key={item.id}>
-                          <div className='grid-img'><img src={item.image}/></div>
+                          <div className='grid-img'><img src={item.images[0]}/></div>
                             <div className='grid-text'>
                               <small>Digial, Electronic</small>
                               <h6>{clipSentence(item.title)}</h6>
