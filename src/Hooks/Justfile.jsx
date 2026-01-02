@@ -5,8 +5,8 @@ import axios from 'axios';
 const Justfile = () => {
  return useQuery ({
      queryKey: ["all-product"],
-     //queryFn: () => axios.get("https://nodecodarprojectbackend.onrender.com/api/v1/admin/productfetch"),
-     queryFn: () => axios.get("https://fakestoreapi.com/products"),
+     queryFn: () => axios.get("http://localhost:2233/api/v1/admin/fetchproduct"),
+     //queryFn: () => axios.get("https://fakestoreapi.com/products"),
      onError: (error) => {
        console.log(error)
      }

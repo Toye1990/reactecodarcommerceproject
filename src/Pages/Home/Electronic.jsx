@@ -37,6 +37,7 @@ const { addToCart } = ContextData()
     return multiply;
   }
 
+  
 
 
  /* useEffect(() => {
@@ -77,7 +78,7 @@ const { addToCart } = ContextData()
 
   
 
-    const {data = [], isLoading, error} = Products()
+    const {data = [], isLoading, error} = Producttoken()
         //const {data = [], isLoading, error} = Producttoken()
 
        if(isLoading){
@@ -85,17 +86,21 @@ const { addToCart } = ContextData()
        }
 
        if(error){
+        console.log(error.message)
         return <div className='d-flex align-items-center  justify-content-center'><h1>error occurred!</h1></div>
+        
        }
 
-       if(data.length === 0){
+       if(!data?.userproducts || data.userproducts.length === 0){
         return <div className='d-flex align-items-center  justify-content-center'><h1>Product Empty!</h1></div>
 
        }
 
-       const products = data.data.slice(0, 2)
+       //const products = data.data.slice(0, 2)
        //const prod = data.data
-       console.log(products)
+       const prod = data?.userproducts || [];
+       const prods = prod.slice(0, 2)
+       console.log("Products Array:", prod);
 
   return (
     <>
@@ -161,9 +166,12 @@ const { addToCart } = ContextData()
         
         <div className='gridcolumn'>
             <div className="grid text-left row-gap-0 col-gap-0 gridset" >
-          {products.map((item) =>(
-            <div className="g-col-6" key={item._id}>
-              <div className='grid-img'><img src={item.images}/></div>
+          {prods.map((item) =>(
+          
+            
+            <div className="g-col-6" key={item.id || item._id}>
+            
+              <div className='grid-img'><img src={item.images[0]}/></div>
                 <div className='grid-text'>
                   <small>Electronics</small>
                   <h6>{clipSentence(item.title, 20)}</h6>
@@ -197,9 +205,9 @@ const { addToCart } = ContextData()
 
            <div className="grid text-left row-gap-0 col-gap-0 gridset" >
            {
-            products.map((item)=>(
-              <div className="g-col-6" key={item.id}>
-              <div className='grid-img'><img src={item.image}/></div>
+            prods.map((item)=>(
+              <div className="g-col-6" key={item.id || item._id}>
+              <div className='grid-img'><img src={item.images[0]}/></div>
                 <div className='grid-text'>
                   <small>Digial, Electronic</small>
                   <h6>{clipSentence(item.title, 20)}</h6>
